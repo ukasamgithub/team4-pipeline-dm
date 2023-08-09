@@ -21,5 +21,10 @@ pipeline{
                 sh 'cat /etc/os-release'
             }
         }
+        stage('5-welcomemassage'){
+            steps{
+                echo "welcome to pipeline as a code"
+            }
+        }
     }
 }
