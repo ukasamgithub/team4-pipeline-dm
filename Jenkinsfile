@@ -8,7 +8,7 @@ pipeline{
         }
         stage('2-cpuanalysis'){
             steps{
-                sh 'lscpu'
+                checkout scmGit(branches: [[name: '*/main']], extensions: [], userRemoteConfigs: [[credentialsId: 'git-id', url: 'https://github.com/ukasamgithub/team4-pipeline-dm.git']])
             }
         }
         stage('3-memorycheck'){
